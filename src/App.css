@@ -1,38 +1,76 @@
 .App {
-  text-align: center;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+	display: flex;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.rows {
+	flex-direction: column;
+	align-items: stretch;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cols {
+	justify-content: flex-start;
 }
-
-.App-link {
-  color: #61dafb;
+.root {
+	height: 100vh;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item {
+	/* background-color: hsla(0, 0%, 0%, 0.25); */
+	/* margin: 5px; */
+}
+.nav {
+	align-items: center;
+	justify-content: center;
+}
+.title {
+	align-items: flex-end;
+	justify-content: center;
+	flex-grow: 1;
+	font-weight: normal;
+}
+.menu {
+}
+.up {
+}
+.down {
+}
+.left {
+	align-self: flex-end;
+}
+.right {
+	align-self: flex-end;
+}
+.canvas {
+	flex-grow: 1;
+}
+.spacer {
+	flex-grow: 1;
+}
+.alt {
+	font-size: 50px;
+	line-height: 50px;
+	background-color: black;
+	color: white;
+	width: 50px;
+	height: 50px;
+	text-transform: uppercase;
+}
+.action,
+.action:link,
+.action:hover,
+.action:active,
+.action:visited {
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	min-width: 50px;
+	text-align: center;
+}
+.action:hover{
+	background-color: hsla(240, 100%, 75%, 0.75);
 }

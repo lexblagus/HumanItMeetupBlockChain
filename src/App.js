@@ -1,40 +1,67 @@
-import logo from './logo.svg';
-import styles from './App.css';
+import { useState } from 'react';
+import Menu from './components/Menu';
+// import contents from './contents';
+// import Cover from './components/Cover';
+import { Link } from "react-router-dom";
+import './App.css';
 
+/*
+⬆ ➡ ⬇ ⬅
+↑ → ↓ ←
+*/
 function App() {
-	{/*
-	⬆ ➡ ⬇ ⬅
-	↑ → ↓ ←
-	*/}
+	const [menuOpen, setMenuOpen] = useState(false);
+
+	const handleToggleMenu = () => {
+		setMenuOpen(!menuOpen);
+	};
 	return (
 		<div className="App">
 			<div className="container rows root">
 				<div className="container item cols">
 					<div className="container item nav menu alt">
-						<span><a href="#" className="action" onClick={e => e.preventDefault()}>☰</a></span>
+						<span><Link to="." className="link-navigation" onClick={handleToggleMenu}>☰</Link></span>
 					</div>
 					<div className="container item nav up alt">
-						<span><a href="#" className="action" onClick={e => e.preventDefault()}>⬆</a></span>
+						<span><Link to="." className="link-navigation" onClick={e => e.preventDefault()}>⬆</Link></span>
 					</div>
 					<div className="container item title alt">
-						<span>Title</span>
+						<span>
+							{menuOpen ? <>
+								Menu
+							</> : <>
+								Title
+							</>}
+						</span>
 						</div>
 					<div className="container item nav alt"></div>
 					<div className="container item nav right alt">
-						<span><a href="#" className="action" onClick={e => e.preventDefault()}>→</a></span>
+						<span><Link to="." className="link-navigation" onClick={e => e.preventDefault()}>→</Link></span>
 					</div>
 				</div>
+
+				{menuOpen && <>
+					<div className="fullscreen">
+						<Menu />
+					</div>
+				</>}
+
+
 				<div className="item canvas">
-					Hello
+					{!menuOpen && <>
+						{'Hello '.repeat(512)}
+					</>}
 				</div>
+
+
 				<div className="container item cols">
 					<div className="container item nav alt"></div>
 					<div className="container item nav down alt">
-						<span><a href="#" className="action" onClick={e => e.preventDefault()}>⬇</a></span>
+						<span><Link to="." className="link-navigation" onClick={e => e.preventDefault()}>⬇</Link></span>
 					</div>
 					<div className="container item spacer alt"></div>
 					<div className="container item nav left alt">
-						<span><a href="#" className="action" onClick={e => e.preventDefault()}>←</a></span>
+						<span><Link to="." className="link-navigation" onClick={e => e.preventDefault()}>←</Link></span>
 					</div>
 				</div>
 			</div>

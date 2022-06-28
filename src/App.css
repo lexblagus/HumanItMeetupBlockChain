@@ -1,3 +1,13 @@
+:root {
+	--primary-color: white;
+	--secondary-color: black;
+	--alternate-color: hsl(240, 100%, 75%);
+	--size-primary: 50px;
+	--size-title: 50px;
+	--size-nav: 40px;
+	--size-nav-alternate: 40px;
+}
+
 .App {
 	min-height: 100vh;
 	display: flex;
@@ -5,7 +15,21 @@
 	align-items: stretch;
 	justify-content: center;
 }
+.fullscreen {
+	background-color: var(--secondary-color);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: inline-block;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	/* padding: 50px; */
+	overflow: auto;
+	background-color: var(--primary-color);
 
+}
 .container {
 	display: flex;
 }
@@ -13,32 +37,32 @@
 	flex-direction: column;
 	align-items: stretch;
 }
+.root {
+	min-height: 100vh;
+	/* height: 100%; */
+}
 .cols {
 	justify-content: flex-start;
 }
-.root {
-	height: 100vh;
-}
 .item {
-	/* background-color: hsla(0, 0%, 0%, 0.25); */
-	/* margin: 5px; */
 }
 .nav {
 	align-items: center;
 	justify-content: center;
+	font-size: var(--size-nav);
+	line-height: var(--size-nav);
 }
 .title {
 	align-items: flex-end;
 	justify-content: center;
 	flex-grow: 1;
 	font-weight: normal;
+	font-size: var(--size-title);
+	line-height: var(--size-title);
 }
-.menu {
-}
-.up {
-}
-.down {
-}
+.menu {}
+.up {}
+.down {}
 .left {
 	align-self: flex-end;
 }
@@ -47,30 +71,31 @@
 }
 .canvas {
 	flex-grow: 1;
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	padding: var(--size-primary);
 }
 .spacer {
 	flex-grow: 1;
 }
 .alt {
-	font-size: 50px;
-	line-height: 50px;
-	background-color: black;
-	color: white;
-	width: 50px;
-	height: 50px;
+	background-color: var(--secondary-color);
+	width:  var(--size-primary);
+	height: var(--size-primary);
 	text-transform: uppercase;
+	color: var(--primary-color);
 }
-.action,
-.action:link,
-.action:hover,
-.action:active,
-.action:visited {
-	color: white;
+.link-navigation,
+.link-navigation:link,
+.link-navigation:hover,
+.link-navigation:active,
+.link-navigation:visited {
+	color: var(--primary-color);
 	text-decoration: none;
 	display: inline-block;
-	min-width: 50px;
+	min-width:  var(--size-primary);
 	text-align: center;
 }
-.action:hover{
-	background-color: hsla(240, 100%, 75%, 0.75);
+.link-navigation:hover{
+	background-color: var(--alternate-color);
 }

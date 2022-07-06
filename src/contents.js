@@ -24,79 +24,94 @@ https://101blockchains.com/top-blockchain-projects-ideas/
 https://originstamp.com/blog/what-is-blockchain-based-timestamping/
 */
 
-const contents = {
-	"Cover": {
+const contents = [
+	{
+		path: "Cover",
 		title: "Cover",
 		image: "",
 		refs: {
 			"Surge": "https://surge.sh/",
 		},
 	},
-	"Index": {
+	{
+		path: "Index",
 		title: "Index",
 		image: "",
 	},
-	"History": {
+	{
+		path: "History",
 		title: "History",
 		image: "",
 	},
-	"Technology": {
+	{
+		path: "Technology",
 		title: "Technology",
 		refs: {
 			"Blockchain 101 on YouTube": "https://www.youtube.com/watch?v=_160oMzblY8&t=1s",
 		},
-		contents: {
-			"Blocks&chains": {
+		contents: [
+			{
+				path: "BlocksAndChains",
 				title: "Blocks & chains",
 				image: "",
 			},
-			"UserDevice": {
+			{
+				path: "UserDevice",
 				title: "User device",
 				image: "",
 			},
-			"Network": {
+			{
+				path: "Network",
 				title: "Network",
 				image: "",
 			},
-		},
+		],
 	},
-	"Opportunities": {
+	{
+		path: "Opportunities",
 		title: "Opportunities",
 		refs: {
 			"Deloitte white paper": "https://www2.deloitte.com/content/dam/Deloitte/ch/Documents/innovation/ch-en-innovation-blockchain-revolution.pdf",
 			"Top Blockchain Project Ideas": "https://101blockchains.com/top-blockchain-projects-ideas/",
 		},
-		contents: {
-			"%E2%80%A6_…1": {
+		contents: [
+			{
+				path: "%E2%80%A6_…1",
 				title: "Rastreability (Manufacturing / supply chain)",
 				image: "",
 			},
-			"%E2%80%A6_…2": {
+			{
+				path: "%E2%80%A6_…2",
 				title: "PEP",
 				image: "",
 			},
-			"%E2%80%A6_…3": {
+			{
+				path: "%E2%80%A6_…3",
 				title: "Social network",
 				image: "",
 			},
-			"%E2%80%A6_…4": {
+			{
+				path: "%E2%80%A6_…4",
 				title: " Card riding",
 				image: "",
 			},
-			"%E2%80%A6_…5": {
+			{
+				path: "%E2%80%A6_…5",
 				title: "Source code",
 				image: "",
 			},
-			"%E2%80%A6_…6": {
+			{
+				path: "%E2%80%A6_…6",
 				title: "Certificado de curso (Tales)",
 				image: "",
 			},
-			"%E2%80%A6_…7": {
+			{
+				path: "%E2%80%A6_…7",
 				title: "Gaming",
 				image: "",
 			},
-		},
+		],
 	},
-};
+];
 
 export default contents;

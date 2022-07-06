@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "surge ./build human-it-blockchain-presentation.surge.sh"
+    "deploy": "npm run build && surge ./build human-it-blockchain-presentation.surge.sh"
   },
   "eslintConfig": {
     "extends": [
